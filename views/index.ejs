@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+</head>
+<body>
+    <h1>Pokedex</h1>
+    <ul>
+        <% pokemons.forEach(function(pokemon) { %>
+            <li><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.nome %></a> - <%= pokemon.tipo %></li>
+        <% }); %>
+    </ul>
+
+    <h1>Treinadores</h1>
+    <ul>
+        <% treinadores.forEach(function(treinador) { %>
+            <li>
+                <a href="/treinador/<%= treinador.id %>"><%= treinador.nomeTreinador %></a> - 
+                <%= treinador.listaPokemon.map(p => p.nome).join(', ') %> <!-- Acesso ao nome do Pokémon -->
+            </li>
+        <% }); %>
+    </ul>
+    
+    
+
+    <a href="/cadastrar">Cadastrar novo Pokémon</a>
+    <a href="/cadastrarTreinador">Cadastrar novo Treinador</a>
+</body>
+</html>
