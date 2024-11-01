@@ -6,14 +6,8 @@ const pokemons = [
     {id : 5, nome : 'charmeleon', tipo : 'fogo'},
 ];
 
-const treinadorPokemons = [
-    {id : 1, nomeTreinador : 'Treinador1', listaPokemon : pokemons},
-    
-];
-
 const getPokemons = () => pokemons;
 const getPokemonById = (id) => pokemons.find(p => p.id === id);
-const createPokemon = (nome, tipo) => pokemons.push({id : pokemons.length + 1, nome, tipo});
-const createPokemonTreinador = (nomeTreinador, listaPokemon) => treinadorPokemons.push({id : treinadorPokemons.length + 1, nomeTreinador, listaPokemon});
+const createPokemon = (nome, tipo, imagem) => pokemons.push({ id: pokemons.length + 1, nome, tipo, imagem });
 
 module.exports = { getPokemons, getPokemonById, createPokemon };

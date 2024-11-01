@@ -1,0 +1,112 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+/* Abas de navegação */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 8px 8px 0 0;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.tab-button.active, .tab-button:hover {
+    background-color: #ff4500;
+}
+
+/* Conteúdo das abas */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Grid de Pokémons e Treinadores */
+.pokemon-grid, .treinador-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Card de Pokémon e Treinador */
+.pokemon-card, .treinador-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.pokemon-card:hover, .treinador-card:hover {
+    transform: scale(1.05);
+}
+
+/* Imagem do Pokémon */
+.pokemon-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Link de detalhes */
+.detalhes-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.detalhes-link:hover {
+    background-color: #45a049;
+}
+
+/* Botões de ação */
+.actions {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff6347;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #ff4500;
+}

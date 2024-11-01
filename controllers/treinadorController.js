@@ -14,17 +14,17 @@ const getTreinador = (req, res) => {
         res.status(404).send('Treinador não encontrado');
     }
 };
-
 const createPokemonTreinador = (req, res) => {
-    const { nomeTreinador, pokemonIds } = req.body; // Receber IDs dos Pokémons
+    const { nomeTreinador, pokemonIds } = req.body; 
     if (!nomeTreinador || !pokemonIds || pokemonIds.length === 0) {
         return res.status(400).send('Nome do treinador e pelo menos um Pokémon são obrigatórios');
     }
 
-    const listaPokemon = pokemonIds.map(id => pokemonModel.getPokemonById(parseInt(id))); // Obter Pokémons selecionados
-    treinadorModel.createPokemonTreinador(nomeTreinador, listaPokemon); // Criar treinador com a lista de Pokémons
+    const listaPokemonIds = pokemonIds.map(id => parseInt(id));
+    treinadorModel.createPokemonTreinador(nomeTreinador, listaPokemonIds);
 
-    res.redirect('/'); // Redireciona para a página principal ou onde desejar
+    res.redirect('/');
 };
+
 
 module.exports = { getAllTreinador, getTreinador, createPokemonTreinador };

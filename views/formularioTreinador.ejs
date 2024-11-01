@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="formTreinador.css">
+
     <title>Cadastrar Treinador</title>
 </head>
 <body>
@@ -12,17 +14,18 @@
         <label for="nome">Nome do Treinador:</label>
         <input type="text" id="nomeTreinador" name="nomeTreinador" required><br><br>
     
-        <label for="pokemons">Escolha os Pokémons:</label>
-        <select name="pokemonIds[]" id="pokemonIds" multiple required> <!-- Note o [] aqui -->
-            <% pokemons.forEach(function(pokemon) { %>
-                <option value="<%= pokemon.id %>"><%= pokemon.nome %></option>
-            <% }); %>
-        </select><br><br>
-    
+        <label>Escolha os Pokémons:</label><br>
+        
+        <% pokemons.forEach(function(pokemon) { %>
+            <div>
+                <input type="checkbox" name="pokemonIds[]" value="<%= pokemon.id %>">
+                <label><%= pokemon.nome %></label>
+            </div>
+        <% }); %>
+        
+        <br><br>
         <button type="submit">Cadastrar</button>
     </form>
-    
-
     <a href="/">Voltar à Pokédex</a>
 </body>
 </html>

@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Pokedex</title>
 </head>
 <body>
     <h1>Pokedex</h1>
-    <ul>
-        <% pokemons.forEach(function(pokemon) { %>
-            <li><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.nome %></a> - <%= pokemon.tipo %></li>
-        <% }); %>
-    </ul>
-
-    <h1>Treinadores</h1>
-    <ul>
-        <% treinadores.forEach(function(treinador) { %>
-            <li>
-                <a href="/treinador/<%= treinador.id %>"><%= treinador.nomeTreinador %></a> - 
-                <%= treinador.listaPokemon.map(p => p.nome).join(', ') %> <!-- Acesso ao nome do Pokémon -->
-            </li>
-        <% }); %>
-    </ul>
-    
-    
-
-    <a href="/cadastrar">Cadastrar novo Pokémon</a>
-    <a href="/cadastrarTreinador">Cadastrar novo Treinador</a>
+    <div class="tabs">
+        <button class="tab-button active" onclick="abrirAba('pokemons')">Pokémons</button>
+        <button class="tab-button" onclick="abrirAba('treinadores')">Treinadores</button>
+    </div>
+    <div id="pokemons" class="tab-content active">
+        <div class="pokemon-grid">
+            <% pokemons.forEach(function(pokemon) { %>
+                <div class="pokemon-card">
+                    <img src="<%= pokemon.imagem %>" alt="<%= pokemon.nome %>" class="pokemon-image">
+                    <h2><%= pokemon.nome %></h2>
+                    <p>Tipo: <%= pokemon.tipo %></p>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+    <div id="treinadores" class="tab-content">
+        <div class="treinador-grid">
+            <% treinadores.forEach(function(treinador) { %>
+                <div class="treinador-card">
+                    <h2><%= treinador.nomeTreinador %></h2>
+                    <p><strong>Pokémons:</strong> <%= treinador.listaPokemon.map(p => p.nome).join(', ') %></p>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+    <div class="actions">
+        <a href="/cadastrarPokemon" class="button">Cadastrar novo Pokémon</a>
+        <a href="/cadastrarTreinador" class="button">Cadastrar novo Treinador</a>
+    </div>
+    <script src="/js/index.js"></script>
 </body>
 </html>

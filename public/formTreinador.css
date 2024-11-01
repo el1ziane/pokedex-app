@@ -1,0 +1,73 @@
+/* Arquivo formTreinador.css */
+#pokemonIds {
+    height: 150px; /* Ajuste conforme necessário */
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3B4CCA;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #FFDE00;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    color: #3B4CCA;
+    margin-top: 10px;
+}
+
+input[type="text"],
+select {
+    padding: 8px;
+    border: 2px solid #FFDE00;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    background-color: #FFDE00;
+    color: #3B4CCA;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: #FF0000;
+    color: #fff;
+}
+
+a {
+    margin-top: 20px;
+    color: #FFDE00;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FF0000;
+}
