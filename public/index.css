@@ -1,4 +1,3 @@
-/* Estilo geral */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
@@ -14,7 +13,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Abas de navegação */
 .tabs {
     display: flex;
     justify-content: center;
@@ -37,7 +35,6 @@ h1 {
     background-color: #ff4500;
 }
 
-/* Conteúdo das abas */
 .tab-content {
     display: none;
 }
@@ -46,7 +43,6 @@ h1 {
     display: block;
 }
 
-/* Grid de Pokémons e Treinadores */
 .pokemon-grid, .treinador-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -55,7 +51,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Card de Pokémon e Treinador */
 .pokemon-card, .treinador-card {
     background-color: #fff;
     border-radius: 8px;
@@ -69,14 +64,12 @@ h1 {
     transform: scale(1.05);
 }
 
-/* Imagem do Pokémon */
 .pokemon-image {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-/* Link de detalhes */
 .detalhes-link {
     display: inline-block;
     margin-top: 10px;
@@ -91,7 +84,6 @@ h1 {
     background-color: #45a049;
 }
 
-/* Botões de ação */
 .actions {
     margin-top: 20px;
 }
